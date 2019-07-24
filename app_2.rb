@@ -75,3 +75,5 @@ while user.life_points > 0 && player1.life_points > 0 ||user.life_points < 0 && 
 			puts "Je suis encore vivre , OEEEE"
 		end
 end
+end
+
