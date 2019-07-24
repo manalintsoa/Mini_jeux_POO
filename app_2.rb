@@ -74,7 +74,4 @@ while user.life_points > 0 && player1.life_points > 0 ||user.life_points < 0 && 
 			puts " #{player2.name.upcase} est  mort"
 			puts "Je suis encore vivre , OEEEE"
 		end
-	else
-		puts " HumanPlayer est mort"
-	end
 end
