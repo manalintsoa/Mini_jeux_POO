@@ -12,9 +12,11 @@ class Player
 
 	def gets_damage(nombre)
 		@life_points = @life_points - nombre
+		@life_points = 0 if @life_points <= 0
 		puts "#{name} a encore #{@life_points} point de vie"
 		if @life_points <= 0
 			puts "le joueur #{name} a été tué"
+
 		else
 			#puts "Le jeu continue"
 		end
@@ -50,10 +52,10 @@ class HumanPlayer < Player
 	end
 
 	def search_weapon
-		arme_niveau = rand(1..6)
-		puts "Tu as trouvé une arme de niveau #{arme_niveau}"
-		if arme_niveau > @weapon_level
-			@weapon_level = arme_niveau
+		level_arm = rand(1..6)
+		puts "Tu as trouvé une arme de niveau #{level_arm}"
+		if level_arm > @weapon_level
+			@weapon_level = level_arm
 			puts "Youhou! elle est meilleur que ton arme  actuelle : tu la prend"
 		else
 			puts "M@*#$ ... elle n'est pas mieux que ton arme actuelle ..."
